@@ -1,0 +1,32 @@
+[tool.poetry]
+name = "macaddress-io-client"
+version = "0.1.0"
+description = ""
+authors = ["David Brown <business@smurfless.com>"]
+readme = "README.md"
+packages = [{include = "macaddress_io_client"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+click = "^8.1.3"
+requests = "^2.28.1"
+keyring = "^23.11.0"
+onepassword = "^0.4.1"
+furl = "^2.1.3"
+
+
+[tool.poetry.group.dev.dependencies]
+black = "^22.12.0"
+pytest = "^7.2.0"
+requests-mock = "^1.10.0"
+poetry2setup = "^1.1.0"
+invoke = "^1.7.3"
+wheel = "^0.38.4"
+build = "^0.9.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+macaddress-io-client = 'macaddress_io_client.cli:root'
